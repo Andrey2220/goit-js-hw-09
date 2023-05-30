@@ -47,12 +47,12 @@ function handleButtonClick() {
     const deltaTime = selectedDateOnClick - currentDate;
     if (deltaTime <= 0) {
       clearInterval(intervalId);
-      // console.log('Timer stopped');
+
       datetimeInput.disabled = false;
       return;
     }
     const { days, hours, minutes, seconds } = convertMs(deltaTime);
-    // console.log(`${days}:${hours}:${minutes}:${seconds}`);
+
     updateClockface({ days, hours, minutes, seconds });
   }, 1000);
 }
